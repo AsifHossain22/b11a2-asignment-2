@@ -1,0 +1,160 @@
+/*  
+* GoogleFonts
+*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* 
+ font-family: "Quicksand", serif;
+
+ font-family: "Raleway", serif;
+*/
+
+/*  
+* GlobalStyle
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand", serif;
+}
+
+:root {
+  --orange: #fea301;
+  --skyblue: #01acfd;
+  --black: #111111;
+  --white: #f7f7f7;
+}
+
+.btn-primary {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background-color: var(--black);
+}
+
+img {
+  max-width: 100%;
+}
+
+.section-header {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+/*  
+* HeaderStyle
+*/
+
+/*  
+* NavbarStyle
+*/
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  width: 1160px;
+  margin: 0 auto;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container img {
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.nav-items-container {
+}
+.nav-items {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.nav-item {
+}
+.nav-link.home {
+  color: var(--orange);
+}
+.nav-link.about {
+  color: var(--skyblue);
+}
+.nav-link.admission {
+  color: #05d4df;
+}
+.nav-link.facilities {
+  color: #5d58ef;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.nav-link:hover.home,
+.nav-link:hover.about,
+.nav-link:hover.facilities,
+.nav-link:hover.admission {
+  background-color: var(--black);
+  color: #ffffff;
+}
+
+/* 
+? MediaQuery / Responsive
+*/
+
+/* LARGE DEVICES - lg (Desktops, 992px and up) */
+@media (min-width: 992px) {
+  .icon-container {
+    display: none;
+  }
+}
+
+/* MEDIUM DEVICES - md (Tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* SMALL DEVICES - sm (Landscape Phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* EXTRA SMALL DEVICES (Portrait Phones, 320px and up) */
+@media (min-width: 320px) and (max-width: 575.98px) {
+  .nav-container {
+    padding: 20px 20px;
+  }
+  .nav-items-container,
+  nav .button-container {
+    display: none;
+  }
+  .nav-container {
+    border-bottom: 1px solid var(--orange);
+  }
+  .icon-container {
+    display: inline;
+  }
+}
+
+/*  
+* MainStyle
+*/
+
+/*  
+* FooterStyle
+*/
