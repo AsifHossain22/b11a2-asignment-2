@@ -114,6 +114,13 @@ img {
   background-color: var(--black);
   color: #ffffff;
 }
+.icon-container {
+  display: none;
+}
+.icon-container i {
+  font-size: 2rem;
+  color: var(--black);
+}
 
 /* 
 ? MediaQuery / Responsive
@@ -121,9 +128,6 @@ img {
 
 /* LARGE DEVICES - lg (Desktops, 992px and up) */
 @media (min-width: 992px) {
-  .icon-container {
-    display: none;
-  }
 }
 
 /* MEDIUM DEVICES - md (Tablets, 768px and up) */
@@ -140,14 +144,14 @@ img {
     padding: 20px 20px;
   }
   .nav-items-container,
-  nav .button-container {
+  .nav-container button {
     display: none;
   }
   .nav-container {
     border-bottom: 1px solid var(--orange);
   }
   .icon-container {
-    display: inline;
+    display: block;
   }
 }
 
