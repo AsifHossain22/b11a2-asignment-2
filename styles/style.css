@@ -29,7 +29,7 @@ body {
 }
 
 .btn-primary {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #ffffff;
   background-color: var(--orange);
@@ -41,6 +41,13 @@ body {
 }
 .btn-primary:hover {
   background-color: var(--black);
+}
+.btn-primary.lite {
+  background-color: var(--black);
+}
+
+.btn-primary.lite:hover {
+  background-color: var(--orange);
 }
 
 img {
@@ -56,17 +63,20 @@ img {
 /*  
 * HeaderStyle
 */
+header {
+  background-color: #f7f7f7;
+}
 
 /*  
 * NavbarStyle
 */
 .nav-container {
+  width: 1160px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  width: 1160px;
-  margin: 0 auto;
 }
 .logo-container {
   display: flex;
@@ -126,9 +136,74 @@ img {
 ? MediaQuery / Responsive
 */
 
-/* LARGE DEVICES - lg (Desktops, 992px and up) */
-@media (min-width: 992px) {
+/* MEDIUM DEVICES - md (Tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
 }
+
+/* SMALL DEVICES - sm (Landscape Phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* EXTRA SMALL DEVICES (Portrait Phones, 320px and up) */
+@media (min-width: 320px) and (max-width: 575.98px) {
+  header,
+  .nav-container {
+    width: 450px;
+  }
+  .nav-container {
+    border-bottom: 1px solid var(--orange);
+  }
+  .nav-items-container,
+  .nav-container button {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-container {
+    padding-left: 20px;
+  }
+  .icon-container {
+    display: block;
+    padding-right: 20px;
+  }
+}
+
+/*  
+* HeroStyle
+*/
+.hero-container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  flex-basis: 55%;
+}
+.hero-title {
+  font-size: 3.5rem;
+}
+.orange-title {
+  color: var(--orange);
+}
+.sky-blue-title {
+  color: var(--skyblue);
+}
+.hero-description {
+  font-size: 20px;
+  color: var(--black);
+  padding: 24px 0;
+}
+.hero-image {
+  flex-basis: 45%;
+  text-align: end;
+}
+
+/* 
+? MediaQuery / Responsive
+*/
 
 /* MEDIUM DEVICES - md (Tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -140,24 +215,170 @@ img {
 
 /* EXTRA SMALL DEVICES (Portrait Phones, 320px and up) */
 @media (min-width: 320px) and (max-width: 575.98px) {
-  .nav-container {
-    padding: 20px 20px;
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
+    width: auto;
   }
-  .nav-items-container,
-  .nav-container button {
-    display: none;
+  .hero-content .btn-primary.lite {
+    background-color: var(--black);
+    font-size: 1rem;
   }
-  .nav-container {
-    border-bottom: 1px solid var(--orange);
+  .hero-content {
+    width: 335px;
   }
-  .icon-container {
-    display: block;
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-description {
+    font-size: 0.8rem;
   }
 }
 
 /*  
 * MainStyle
 */
+
+/*  
+* CurriculumStyle
+*/
+.curriculum {
+  background: url(../images/bg.png) center center no-repeat #f7f7f7;
+  background-size: cover;
+  padding: 60px 0;
+}
+.curriculum-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+.curriculum-items {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.curriculum .section-header {
+  text-align: center;
+}
+.curriculum-item {
+  padding: 50px 40px;
+  border-radius: 18px;
+  text-align: center;
+}
+.curriculum-item.item-1 {
+  background: linear-gradient(180deg, #def5ff, #ffffff);
+}
+.curriculum-item.item-2 {
+  background: linear-gradient(180deg, #fff4dc, #ffffff);
+}
+.curriculum-item.item-3 {
+  background: linear-gradient(180deg, #eee1ff, #ffffff);
+}
+.curriculum-item .icon {
+  padding-bottom: 32px;
+}
+.curriculum-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.curriculum-description {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 30px 0;
+}
+.curriculum-item.item-1 .btn-primary {
+  background-color: transparent;
+  color: var(--skyblue);
+  padding: 0;
+}
+.curriculum-item.item-1 .btn-primary:hover {
+  color: var(--orange);
+}
+.curriculum-item.item-2 .btn-primary {
+  background-color: transparent;
+  color: var(--orange);
+  padding: 0;
+}
+.curriculum-item.item-2 .btn-primary:hover {
+  color: var(--skyblue);
+}
+.curriculum-item.item-3 .btn-primary {
+  background-color: transparent;
+  color: #8700ff;
+  padding: 0;
+}
+.curriculum-item.item-3 .btn-primary:hover {
+  color: var(--orange);
+}
+.slider-icon-container {
+  text-align: center;
+}
+.slider-icon-container i {
+  background-color: var(--orange);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 18px 22px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.slider-icon-container i:hover {
+  background-color: var(--skyblue);
+}
+
+/* 
+? MediaQuery / Responsive
+*/
+
+/* MEDIUM DEVICES - md (Tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* SMALL DEVICES - sm (Landscape Phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* EXTRA SMALL DEVICES (Portrait Phones, 320px and up) */
+@media (min-width: 320px) and (max-width: 575.98px) {
+  .curriculum {
+    width: 450px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  .curriculum-container {
+    width: auto;
+  }
+  .curriculum-items {
+    grid-template-columns: 1fr;
+    padding: 20px 0;
+  }
+  .curriculum .section-header {
+    font-size: 1.5rem;
+  }
+  .curriculum-item {
+    width: 350px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+  .curriculum-item .btn-primary {
+    font-size: 0.6rem;
+  }
+  curriculum-item .icon {
+    padding-bottom: 22px;
+  }
+  .curriculum-title {
+    font-size: 1rem;
+  }
+  .curriculum-description {
+    font-size: 0.6rem;
+    padding: 22px 80px;
+  }
+  .slider-icon-container {
+    display: none;
+  }
+}
 
 /*  
 * FooterStyle
