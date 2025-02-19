@@ -247,7 +247,8 @@ header {
 .curriculum {
   background: url(../images/bg.png) center center no-repeat #f7f7f7;
   background-size: cover;
-  padding: 60px 0;
+  padding-top: 60px;
+  margin-bottom: 60px;
 }
 .curriculum-container {
   width: 1160px;
@@ -328,6 +329,17 @@ header {
 .slider-icon-container i:hover {
   background-color: var(--black);
 }
+.marquee {
+  background-color: var(--orange);
+  color: #ffffff;
+  margin-top: 60px;
+}
+.marquee-text {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 40px;
+}
 
 /* 
 ? MediaQuery / Responsive
@@ -346,7 +358,7 @@ header {
   .curriculum {
     width: 450px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding-top: 40px;
   }
   .curriculum-container {
     width: auto;
@@ -379,13 +391,17 @@ header {
   .slider-icon-container {
     display: none;
   }
+
+  .marquee {
+    margin-top: 30px;
+  }
 }
 
 /*  
 * OurStoryStyle
 */
 .our-stories {
-  padding-top: 60px;
+  /* padding-top: 60px; */
   background: url(../images/bg.png),
     linear-gradient(180deg, #ffffff30, #fea30130);
   background-size: cover;
@@ -489,9 +505,14 @@ header {
 @media (min-width: 320px) and (max-width: 575.98px) {
   .our-stories-container {
     width: 390px;
+    padding-top: 40px;
+  }
+  .our-stories .section-header {
+    font-size: 1.5rem;
   }
   .our-story-container {
     grid-template-columns: 1fr;
+    padding: 50px 0;
   }
   .our-story-container .left-item {
     display: none;
