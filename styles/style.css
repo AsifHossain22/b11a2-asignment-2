@@ -144,6 +144,7 @@ header {
   header,
   .nav-container {
     width: 450px;
+    margin: 0 auto;
   }
   .nav-container {
     border-bottom: 1px solid var(--orange);
@@ -387,6 +388,7 @@ header {
   }
   .marquee {
     margin-top: 30px;
+    width: 450px;
   }
 }
 
